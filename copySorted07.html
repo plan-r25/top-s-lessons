@@ -1,0 +1,16 @@
+<script>
+  function copySorted(arr) {
+    let copy = [...arr];
+    return copy.sort((a, b) => a.localeCompare(b));
+  };
+ 
+  let arr = ["HTML", "JavaScript", "CSS"];
+  let sorted = copySorted(arr);
+  alert( sorted ); // CSS, HTML, JavaScript
+  alert( arr ); // HTML, JavaScript, CSS (no changes)
+   
+  //Or we can use toSorted replace the function
+  let arr2 = ["HTML", "BavaScript", "CSS"];
+  let sorting = arr2.toSorted();
+  alert(sorting);
+</script>
