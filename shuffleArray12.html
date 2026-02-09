@@ -1,0 +1,25 @@
+<script>
+  function shuffle(array) {
+   for (let i = array.length - 1; i >= 0; i--) {
+        let random = Math.floor(Math.random() * (i + 1));
+        //swap elements
+        let curr = array[i];
+        array[i] = array[random];
+        array[random] = curr;
+      }
+    return array;
+    //or 
+   //return array.sort(() => Math.random() - 0.5)
+  }
+
+  let arr = [1, 2, 3];
+
+alert(shuffle(arr));
+// arr = [3, 2, 1]
+
+alert(shuffle(arr));
+// arr = [2, 1, 3]
+
+alert(shuffle(arr));
+// arr = [3, 1, 2]
+</script>
